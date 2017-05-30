@@ -1,0 +1,8 @@
+<ul>
+<h1>最新消息<h1>
+<% @new.each do |b| %>
+  <li>
+ 	  <%= b.description b.year/b.month/b.day %>
+  </li>
+<% end %>
+</ul>
