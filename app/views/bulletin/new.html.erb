@@ -1,0 +1,16 @@
+<%= form_for @boards, :url => bulletin_index_path do |f| %>
+
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description %>
+
+    <%= f.label :year, "year" %>
+    <%= f.text_field :year %>
+
+    <%= f.label :month, "Month" %>
+    <%= f.text_field :month %>
+
+    <%= f.label :day, "day" %>
+    <%= f.text_field :day %>
+
+    <%= f.submit "Create" %>
+<% end %>

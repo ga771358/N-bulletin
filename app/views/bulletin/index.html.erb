@@ -1,8 +1,10 @@
 <ul>
 <h1>最新消息<h1>
-<% @new.each do |b| %>
+<% @boards.each do |b| %>
   <li>
  	  <%= b.description b.year/b.month/b.day %>
   </li>
 <% end %>
+
+ <%= link_to 'new', new_bulletin_path %>
 </ul>
