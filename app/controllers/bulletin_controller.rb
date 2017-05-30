@@ -10,6 +10,11 @@ class BulletinController < ApplicationController
         @boards.save
         redirect_to bulletin_index_path
     end
+    def destroy
+        @event = Board.find(params[:id])
+        @event.destroy
+        redirect_to bulletin_index_path
+    end
 
     private
     def board_params

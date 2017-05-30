@@ -7,6 +7,7 @@
        <%= b.year %>/
        <%= b.month %>/
        <%= b.day %>
+       <%= link_to 'delete', bulletin_path(b) , :method => :delete%>
        </p>
   </li>
 <% end %>
