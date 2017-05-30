@@ -29,7 +29,7 @@ class BulletinController < ApplicationController
 
     private
     def board_params
-    params.require(:board).permit(:description,:year,:month,:day)
+    params.require(:board).permit(:description,:year,:month,:day,:new)
     end
     
 end
