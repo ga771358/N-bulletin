@@ -1,6 +1,20 @@
 <ul>
 <h1>最新消息<h1>
-<% @boards.each do |b| %>
+<% @news.each do |b| %>
+  <li>
+      <p>
+ 	   <%= b.description %>
+       <%= b.year %>/
+       <%= b.month %>/
+       <%= b.day %>
+       <%= link_to 'delete', bulletin_path(b) , :method => :delete %>
+       <%= link_to 'edit', edit_bulletin_path(b) %>
+       </p>
+  </li>
+<% end %>
+
+<h1>網頁改版<h1>
+<% @update.each do |b| %>
   <li>
       <p>
  	   <%= b.description %>
@@ -8,9 +22,11 @@
        <%= b.month %>/
        <%= b.day %>
        <%= link_to 'delete', bulletin_path(b) , :method => :delete%>
+       <%= link_to 'edit', edit_bulletin_path(b) %>
        </p>
   </li>
 <% end %>
 
- <%= link_to 'new', new_bulletin_path %>
+ <%= link_to '新增最新消息', new_bulletin_path(new: 1) %>
+ <%= link_to '新增網頁改版', new_bulletin_path(new: 0) %>
 </ul>

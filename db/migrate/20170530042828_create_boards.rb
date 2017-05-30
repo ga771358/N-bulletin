@@ -5,7 +5,6 @@ class CreateBoards < ActiveRecord::Migration[5.1]
       t.string :year
       t.string :month
       t.string :day
-
       t.timestamps
     end
   end
