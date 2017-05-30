@@ -2,7 +2,12 @@
 <h1>最新消息<h1>
 <% @boards.each do |b| %>
   <li>
- 	  <%= b.description b.year/b.month/b.day %>
+      <p>
+ 	   <%= b.description %>
+       <%= b.year %>/
+       <%= b.month %>/
+       <%= b.day %>
+       </p>
   </li>
 <% end %>
 
